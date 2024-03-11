@@ -1,7 +1,8 @@
 export class Customer {
     private firstName: string;
     private lastName: string;
-  
+    
+    private age: number;
     constructor(firstName: string, lastName: string) {
       this.firstName = firstName;
       this.lastName = lastName;
@@ -9,10 +10,8 @@ export class Customer {
     public greeter() {
       console.log(`Hello ${this.firstName} ${this.lastName}`);
     }
-  }
-  
-  // create instance of customer class and call method on object
-  let customer = new Customer("Alvaro", "Aguirre");
 
-  customer.greeter();
-  
+    public getAge(): number {
+      return this.age;
+    }
+  }
